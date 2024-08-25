@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../../assets/fonts/Noto_Sans-Oswald/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto_Sans";
+  src: url("../../assets/fonts/Noto_Sans-Oswald/Noto_Sans/NotoSans.ttf") format("truetype");
+}
+.light-theme {
+  --color-text: $black-color;
+  --color-text-revers: #fff;
+  --color-bg: #f0f0f0;
+  --color-bg-reverse: #000;
+  --nav-bg: #fff;
+}
+
+.dark-theme {
+  --color-text: #f0f0f0;
+  --color-text-revers: #000;
+  --color-bg: #282828;
+  --color-bg-reverse: #fff;
+  --nav-bg: #000;
+  --nav-logo: url("../../assets/imgs/Logo/logoGimpW.svg");
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  border: 1px #000000 solid;
+}
+
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    filter: blur(4px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+.puff-in-center {
+  animation: puff-in-center 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+@keyframes puff-in-center {
+  0% {
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+header div.navBanner {
+  font-family: "Oswald";
+  background-color: var(--color-bg-reverse);
+  color: var(--color-text-revers);
+  font-size: 0.7em;
+  text-align: center;
+  border: 1px solid #292929;
+}
+header nav.navbar {
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+}
+header ul.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header li.navItems {
+  margin: 0 0.5em 0 0.5em;
+  padding: 0.5em;
+  text-align: center;
+}
+header img.navImg,
+header button.navBtn {
+  width: 2em;
+  height: auto;
+}
+header a.navTitle {
+  display: flex;
+  font-family: "Oswald";
+  font-size: 2em;
+  text-decoration: none;
+  color: var(--color-text);
+  align-items: center;
+}
+header img.navLogo {
+  width: 2em;
+  height: 2em;
+  text-align: end;
+}
+header button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+article#carrousel .container {
+  overflow: hidden;
+}
+article#carrousel .carrousel {
+  position: relative;
+}
+article#carrousel .slider {
+  display: flex;
+  overflow: hidden;
+  height: 50vh;
+  flex-wrap: nowrap;
+}
+article#carrousel .slide {
+  flex: 0 0 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+article#carrousel .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+article#carrousel .carrouselBtn {
+  position: absolute;
+  z-index: 5;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+article#carrousel .carrouselBtn button {
+  padding: 0 5px 0 5px;
+  background-color: #000;
+  color: #fff;
+  border: 1px white solid;
+  cursor: pointer;
+  font-family: "Oswald";
+}
+article#carrousel .carrouselDots {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  right: 50%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+}
+article#carrousel .carouselDots .dot {
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=theme.css.map */

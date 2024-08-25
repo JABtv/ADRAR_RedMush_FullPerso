@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RedMush - Marque de streetwear</title>
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="src/scss/theme.css" />
+    </head>
+    <body class="puff-in-center">
+        <header>
+            <div class="navBanner">
+                <p>FRAIS DE PORT OFFERTS À PARTIR DE 80€</p>
+            </div>
+            <nav class="navbar box">
+                <ul class="navList">
+                    <li class="navItems">
+                        <button class="navBtn" id="navBtnUser">
+                            <img
+                                class="navImg"
+                                src="assets/imgs/Icons/Black/account_circle_24dp_FILL0_wght400_GRAD0_opsz24_black.png"
+                                alt="" />
+                        </button>
+                    </li>
+                    <li class="navItems">
+                        <button class="navBtn">
+                            <img
+                                class="navImg"
+                                src="assets/imgs/Icons/Black/shopping_bag_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+                                alt="" />
+                        </button>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="navTitle">
+                    <img
+                        class="navLogo"
+                        src="assets/imgs/Logo/logoGimpB.svg"
+                        alt="" />
+                    RedMush
+                </a>
+                <ul class="navList">
+                    <li class="navItems">
+                        <button class="navBtn">
+                            <img
+                                class="navImg"
+                                src="assets/imgs/Icons/Black/search_24dp_FILL0_wght400_GRAD0_opsz24.png"
+                                alt="" />
+                        </button>
+                    </li>
+                    <li class="navItems">
+                        <button class="navBtn">
+                            <img
+                                class="navImg"
+                                src="assets/imgs/Icons/Black/menu_24dp_FILL0_wght400_GRAD0_opsz24.png"
+                                alt="" />
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article id="carrousel">
+                <div class="container">
+                    <div class="carrousel">
+                        <!-- conteneur interne pour les diapositives -->
+                        <div class="slider">
+                            <div class="slide">
+                                <img
+                                    src="assets/imgs/IA_Image/Background/background01.jpeg"
+                                    alt="Image produit 1" />
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="assets/imgs/IA_Image/Background/background02.jpeg"
+                                    alt="Image produit 2" />
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="assets/imgs/IA_Image/Background/background03.jpeg"
+                                    alt="Image produit 3" />
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="assets/imgs/IA_Image/Background/background04.jpeg"
+                                    alt="Image produit 4" />
+                            </div>
+                        </div>
+                        <div class="carrouselBtn">
+                            <button id="prev"><</button>
+                            <button id="next">></button>
+                        </div>
+                        <div class="carrouselDots"></div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>

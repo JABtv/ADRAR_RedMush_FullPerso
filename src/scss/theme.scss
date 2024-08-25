@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("../../assets/fonts/Noto_Sans-Oswald/Oswald/Oswald-VariableFont_wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "Noto_Sans";
+    src: url("../../assets/fonts/Noto_Sans-Oswald/Noto_Sans/NotoSans.ttf")
+        format("truetype");
+}
+
+// Variables Fonts
+
+$font-o: "Oswald";
+$font-ns: "Noto_Sans";
+
+// Variables Sizes
+$sizes-1: 0.5em;
+$sizes-2: 1em;
+$sizes-3: 1.25em;
+$sizes-4: 1.5em;
+$sizes-5: 2em;
+$sizes-6: 2.5em;
+$sizes-7: 3.25em;
+
+// Variables Textes
+$sizes-text-title: 0.8em;
+
+// Variables Icones
+
+$icon-width: 2em;
+
+// Variables
+
+// Variables Thèmes
+
+$black-color: #292929;
+$white-color: #f0f0f0;
+$red-color: #d71c10;
+
+// Thèmes
+
+.light-theme {
+    --color-text: $black-color;
+    --color-text-revers: #fff;
+    --color-bg: #f0f0f0;
+    --color-bg-reverse: #000;
+
+    //navbar
+
+    --nav-bg: #fff;
+}
+
+.dark-theme {
+    --color-text: #f0f0f0;
+    --color-text-revers: #000;
+    --color-bg: #282828;
+    --color-bg-reverse: #fff;
+
+    //navbar
+
+    --nav-bg: #000;
+    --nav-logo: url("../../assets/imgs/Logo/logoGimpW.svg");
+}
+
+// CSS Communs
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    border: 1px #000000 solid;
+}
+
+// Body Annimation
+
+@keyframes puff-in-center {
+    0% {
+        transform: scale(2);
+        filter: blur(4px);
+    }
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+.puff-in-center {
+    -webkit-animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715)
+        both;
+    animation: puff-in-center 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+@keyframes puff-in-center {
+    0% {
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+// Navbar
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    div.navBanner {
+        font-family: $font-o;
+        background-color: var(--color-bg-reverse);
+        color: var(--color-text-revers);
+        font-size: 0.7em;
+        text-align: center;
+        border: 1px solid $black-color;
+    }
+
+    nav.navbar {
+        background-color: var(--nav-bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: static;
+    }
+
+    ul.navList {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li.navItems {
+        margin: 0 $sizes-1 0 $sizes-1;
+        padding: $sizes-1;
+        text-align: center;
+    }
+
+    img.navImg,
+    button.navBtn {
+        width: $icon-width;
+        height: auto;
+    }
+
+    a.navTitle {
+        display: flex;
+        font-family: $font-o;
+        font-size: $sizes-5;
+        text-decoration: none;
+        color: var(--color-text);
+        align-items: center;
+    }
+
+    img.navLogo {
+        width: $sizes-5;
+        height: $sizes-5;
+        text-align: end;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+article#carrousel {
+    .container {
+        overflow: hidden; // Cache les éléments qui dépassent du container
+    }
+
+    .carrousel {
+        position: relative; // Le carousel est positionné relativement à son parent
+    }
+
+    .slider {
+        display: flex; // Affiche les éléments en ligne
+        overflow: hidden; // Cache les éléments qui dépassent
+        height: 50vh; // Hauteur égale à 100% de la hauteur de la vue
+        flex-wrap: nowrap; // Empêche les éléments de se placer sur plusieurs lignes
+    }
+
+    .slide {
+        flex: 0 0 100%; // Largeur de chaque diapositive est de 100%
+        height: 100%; // Hauteur de chaque diapositive est de 100%
+        transition: 0.5s ease-in-out; // Ajout d'une animation douce pour la transition entre les diapositives
+    }
+
+    .slide img {
+        width: 100%; // Largeur de l'image est de 100%
+        height: 100%; // Hauteur de l'image est de 100%
+        object-fit: cover; // Couvre tout l'espace disponible
+    }
+
+    .carrouselBtn {
+        position: absolute; // Les boutons sont absolument positionnés
+        z-index: 5; // Ils sont placés au-dessus des autres éléments
+        left: 5%; // La distance à gauche est de 10%
+        right: 5%; // La distance à droite est de 10%
+        top: 50%; // La distance du haut est de 50%
+        display: flex; // Affiche les boutons en ligne
+        justify-content: space-between; // Espacement égal entre les boutons
+    }
+
+    .carrouselBtn button {
+        padding: 0 5px 0 5px; // Ajout de padding pour un meilleur contrôle
+        background-color: #000; // Arrière-plan
+        color: #fff;
+        border: 1px white solid;
+        cursor: pointer;
+        font-family: $font-o;
+    }
+
+    .carrouselDots {
+        position: absolute; // Les points sont absolument positionnés
+        z-index: 5; // Ils sont placés au-dessus des autres éléments
+        left: 50%; // La distance à gauche est de 50%
+        right: 50%; // La distance à droite est de 50%
+        bottom: 10%; //La distance du bas est de 10%
+        display: flex; // Affiche les points en ligne
+        justify-content: center; // Centrage des points
+    }
+
+    .carouselDots .dot {
+        border-radius: 50%; // Les points sont en forme de cercle
+        margin: 5px; // Ajout d'un margin pour un meilleur contrôle
+        cursor: pointer; // Curseur en forme de main pour un meilleur contrôle
+    }
+}
