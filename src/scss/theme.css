@@ -202,11 +202,12 @@ section.vitrine h2 {
   margin-left: 2.5em;
 }
 
-section#nouveaute article.produit {
+section#nouveaute article.produit .container {
   display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10%;
-  gap: 1em;
-  justify-content: space-around;
+  grid-template-columns: repeat(6, 15em);
+  grid-template-rows: 1;
+  grid-column-gap: 65px;
+  grid-row-gap: 0px;
 }
 section#nouveaute article.produit .card {
   display: flex;
@@ -227,37 +228,58 @@ section#nouveaute article.produit p {
   margin: 0;
   padding: 0;
 }
-section#nouveaute article.produit h3.title {
+section#nouveaute article.produit h3.cardTitle {
   font-family: "Oswald";
   font-weight: 300;
   font-size: 24px;
 }
-section#nouveaute article.produit p.subtitle {
+section#nouveaute article.produit p.cardPrice {
   color: #d71c10;
   font-size: 36px;
   font-weight: lighter;
   font-family: "Oswald";
 }
-section#nouveaute article.produit .colors button {
+section#nouveaute article.produit .cardColors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+}
+section#nouveaute article.produit .cardColors button {
   width: 2em;
   height: 2em;
   border: 1px black solid;
 }
-section#nouveaute article.produit .colors #cardBtn1 {
+section#nouveaute article.produit .cardColors #cardBtn1 {
   background-color: #fff;
 }
-section#nouveaute article.produit .colors #cardBtn2 {
+section#nouveaute article.produit .cardColors #cardBtn2 {
   background-color: #000;
 }
-section#nouveaute article.produit .colors #cardBtn3 {
+section#nouveaute article.produit .cardColors #cardBtn3 {
   background-color: #646464;
 }
-section#nouveaute article.produit .colors #cardBtn4 {
+section#nouveaute article.produit .cardColors #cardBtn4 {
   background-color: #d71c10;
 }
 
-@media (max-width: 1281px) {
+@media screen and (max-width: 1281px) {
   header a.navTitle span {
     display: none;
+  }
+  section#carrousel {
+    flex-direction: column;
+  }
+  article.produit .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 0px;
+    grid-column-gap: 35px;
+  }
+}
+@media screen and (max-width: 1325px) {
+  .container {
+    grid-column-gap: 45px;
   }
 }/*# sourceMappingURL=theme.css.map */
