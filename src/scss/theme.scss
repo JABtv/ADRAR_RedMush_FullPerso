@@ -66,6 +66,9 @@ $red-color: #d71c10;
 
 // CSS Communs
 body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--color-bg);
     color: var(--color-text);
     margin: 0;
@@ -109,11 +112,6 @@ body {
 
 // Navbar
 header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
     div.navBanner {
         font-family: $font-o;
         background-color: var(--color-bg-reverse);
@@ -157,6 +155,7 @@ header {
         text-decoration: none;
         color: var(--color-text);
         align-items: center;
+        font-weight: bold;
     }
 
     img.navLogo {
@@ -172,7 +171,7 @@ header {
     }
 }
 
-article#carrousel {
+section#carrousel {
     .container {
         overflow: hidden; // Cache les éléments qui dépassent du container
     }
@@ -231,7 +230,63 @@ article#carrousel {
 
     .carouselDots .dot {
         border-radius: 50%; // Les points sont en forme de cercle
-        margin: 5px; // Ajout d'un margin pour un meilleur contrôle
+        margin: 10px; // Ajout d'un margin pour un meilleur contrôle
         cursor: pointer; // Curseur en forme de main pour un meilleur contrôle
+    }
+}
+
+section.vitrine {
+    margin-left: 5em;
+
+    h2 {
+        font-family: $font-o;
+    }
+}
+
+section#nouveaute {
+    article.produit {
+        display: grid;
+        grid-template-columns: 15em 15em 15em 15em 15em;
+        align-items: center;
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 1px black solid;
+            padding: 0.5em;
+            margin: 1em;
+        }
+
+        .card img {
+            align-items: center;
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+        }
+
+        h3,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            font-family: $font-o;
+            font-weight: 300;
+            font-size: 24px;
+        }
+
+        p {
+            color: $red-color;
+            font-size: 36px;
+            font-weight: lighter;
+        }
+    }
+}
+
+@media (max-width: 1281px) {
+    header {
+        a.navTitle span {
+            display: none;
+        }
     }
 }

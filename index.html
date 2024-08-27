@@ -12,7 +12,7 @@
             <div class="navBanner">
                 <p>FRAIS DE PORT OFFERTS À PARTIR DE 80€</p>
             </div>
-            <nav class="navbar box">
+            <nav class="navbar">
                 <ul class="navList">
                     <li class="navItems">
                         <button class="navBtn" id="navBtnUser">
@@ -37,7 +37,7 @@
                         class="navLogo"
                         src="assets/imgs/Logo/logoGimpB.svg"
                         alt="" />
-                    RedMush
+                    <span>RedMush</span>
                 </a>
                 <ul class="navList">
                     <li class="navItems">
@@ -61,7 +61,7 @@
         </header>
 
         <main>
-            <article id="carrousel">
+            <section id="carrousel">
                 <div class="container">
                     <div class="carrousel">
                         <!-- conteneur interne pour les diapositives -->
@@ -89,13 +89,59 @@
                         </div>
                         <div class="carrouselBtn">
                             <button id="prev"><</button>
+                            <div class="carrouselDots"></div>
                             <button id="next">></button>
                         </div>
-                        <div class="carrouselDots"></div>
                     </div>
                 </div>
-            </article>
+            </section>
+            <section class="vitrine" id="nouveaute">
+                <h2>NOUVEAUTÉ</h2>
+                <article class="produit">
+                    <div class="card">
+                        <img
+                            src="assets/imgs/IA_Image/vetement/vetement001.jpeg"
+                            alt="Image produit 1" />
+                        <h3>Mushroom | Sweat-Shirt</h3>
+                        <p>65€</p>
+                        <div class="colors">
+                            <button id="cardBtn1"></button>
+                            <button id="cardBtn2"></button>
+                            <button id="cardBtn3"></button>
+                            <button id="cardBtn4"></button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="assets/imgs/IA_Image/vetement/vetement001.jpeg"
+                            alt="Image produit 1" />
+                        <h3>Mushroom | Sweat-Shirt</h3>
+                        <p>65€</p>
+                        <div class="colors">
+                            <button id="cardBtn1"></button>
+                            <button id="cardBtn2"></button>
+                            <button id="cardBtn3"></button>
+                            <button id="cardBtn4"></button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="assets/imgs/IA_Image/vetement/vetement001.jpeg"
+                            alt="Image produit 1" />
+                        <h3>Mushroom | Sweat-Shirt</h3>
+                        <p>65€</p>
+                        <div class="colors">
+                            <button id="cardBtn1"></button>
+                            <button id="cardBtn2"></button>
+                            <button id="cardBtn3"></button>
+                            <button id="cardBtn4"></button>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </main>
-        <script src="src/js/script.js"></script>
+        <script src="src/js/carrousel.js"></script>
     </body>
 </html>

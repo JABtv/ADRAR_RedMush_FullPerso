@@ -24,6 +24,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background-color: var(--color-bg);
   color: var(--color-text);
   margin: 0;
@@ -57,12 +60,6 @@ body {
     filter: blur(0px);
     opacity: 1;
   }
-}
-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 header div.navBanner {
   font-family: "Oswald";
@@ -102,6 +99,7 @@ header a.navTitle {
   text-decoration: none;
   color: var(--color-text);
   align-items: center;
+  font-weight: bold;
 }
 header img.navLogo {
   width: 2em;
@@ -114,30 +112,30 @@ header button {
   cursor: pointer;
 }
 
-article#carrousel .container {
+section#carrousel .container {
   overflow: hidden;
 }
-article#carrousel .carrousel {
+section#carrousel .carrousel {
   position: relative;
 }
-article#carrousel .slider {
+section#carrousel .slider {
   display: flex;
   overflow: hidden;
   height: 50vh;
   flex-wrap: nowrap;
 }
-article#carrousel .slide {
+section#carrousel .slide {
   flex: 0 0 100%;
   height: 100%;
   transition: 0.5s ease-in-out;
 }
-article#carrousel .slide img {
+section#carrousel .slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-article#carrousel .carrouselBtn {
+section#carrousel .carrouselBtn {
   position: absolute;
   z-index: 5;
   left: 5%;
@@ -146,7 +144,7 @@ article#carrousel .carrouselBtn {
   display: flex;
   justify-content: space-between;
 }
-article#carrousel .carrouselBtn button {
+section#carrousel .carrouselBtn button {
   padding: 0 5px 0 5px;
   background-color: #000;
   color: #fff;
@@ -154,7 +152,7 @@ article#carrousel .carrouselBtn button {
   cursor: pointer;
   font-family: "Oswald";
 }
-article#carrousel .carrouselDots {
+section#carrousel .carrouselDots {
   position: absolute;
   z-index: 5;
   left: 50%;
@@ -163,8 +161,56 @@ article#carrousel .carrouselDots {
   display: flex;
   justify-content: center;
 }
-article#carrousel .carouselDots .dot {
+section#carrousel .carouselDots .dot {
   border-radius: 50%;
-  margin: 5px;
+  margin: 10px;
   cursor: pointer;
+}
+
+section.vitrine {
+  margin-left: 5em;
+}
+section.vitrine h2 {
+  font-family: "Oswald";
+}
+
+section#nouveaute article.produit {
+  display: grid;
+  grid-template-columns: 15em 15em 15em 15em 15em;
+  align-items: center;
+}
+section#nouveaute article.produit .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  padding: 0.5em;
+  margin: 1em;
+}
+section#nouveaute article.produit .card img {
+  align-items: center;
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#nouveaute article.produit h3,
+section#nouveaute article.produit p {
+  margin: 0;
+  padding: 0;
+}
+section#nouveaute article.produit h3 {
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 24px;
+}
+section#nouveaute article.produit p {
+  color: #d71c10;
+  font-size: 36px;
+  font-weight: lighter;
+}
+
+@media (max-width: 1281px) {
+  header a.navTitle span {
+    display: none;
+  }
 }/*# sourceMappingURL=theme.css.map */
