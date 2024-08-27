@@ -23,6 +23,32 @@
   --nav-logo: url("../../assets/imgs/Logo/logoGimpW.svg");
 }
 
+/* ScrollBar */
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+/* total width */
+body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+  background-color: #d71c10;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -168,28 +194,31 @@ section#carrousel .carouselDots .dot {
 }
 
 section.vitrine {
-  margin-left: 5em;
+  display: flex;
+  flex-direction: column;
 }
 section.vitrine h2 {
   font-family: "Oswald";
+  margin-left: 2.5em;
 }
 
 section#nouveaute article.produit {
   display: grid;
-  grid-template-columns: 15em 15em 15em 15em 15em;
-  align-items: center;
+  grid-template-columns: 10% 10% 10% 10% 10% 10%;
+  gap: 1em;
+  justify-content: space-around;
 }
 section#nouveaute article.produit .card {
   display: flex;
   flex-direction: column;
   border: 1px black solid;
   padding: 0.5em;
-  margin: 1em;
+  background-color: white;
 }
 section#nouveaute article.produit .card img {
   align-items: center;
   width: 100%;
-  height: 75%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -198,15 +227,33 @@ section#nouveaute article.produit p {
   margin: 0;
   padding: 0;
 }
-section#nouveaute article.produit h3 {
+section#nouveaute article.produit h3.title {
   font-family: "Oswald";
   font-weight: 300;
   font-size: 24px;
 }
-section#nouveaute article.produit p {
+section#nouveaute article.produit p.subtitle {
   color: #d71c10;
   font-size: 36px;
   font-weight: lighter;
+  font-family: "Oswald";
+}
+section#nouveaute article.produit .colors button {
+  width: 2em;
+  height: 2em;
+  border: 1px black solid;
+}
+section#nouveaute article.produit .colors #cardBtn1 {
+  background-color: #fff;
+}
+section#nouveaute article.produit .colors #cardBtn2 {
+  background-color: #000;
+}
+section#nouveaute article.produit .colors #cardBtn3 {
+  background-color: #646464;
+}
+section#nouveaute article.produit .colors #cardBtn4 {
+  background-color: #d71c10;
 }
 
 @media (max-width: 1281px) {
