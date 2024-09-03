@@ -59,6 +59,14 @@ body {
   padding: 0;
 }
 
+button {
+  background-color: var(--color-bg-reverse);
+  color: var(--color-text-revers);
+  border: none;
+  border-color: #000;
+  font-family: "Noto_Sans";
+}
+
 .box {
   border: 1px #000000 solid;
 }
@@ -193,75 +201,71 @@ section#carrousel .carouselDots .dot {
   cursor: pointer;
 }
 
-section.vitrine {
-  display: flex;
-  flex-direction: column;
-}
-section.vitrine h2 {
+section h2 {
   font-family: "Oswald";
-  margin-left: 2.5em;
+  margin-left: 20px;
 }
-
-section#nouveaute article.produit .container {
-  display: grid;
-  grid-template-columns: repeat(6, 15em);
-  grid-template-rows: 1;
-  grid-column-gap: 65px;
-  grid-row-gap: 0px;
-}
-section#nouveaute article.produit .card {
+section article.produit div.container {
   display: flex;
-  flex-direction: column;
-  border: 1px black solid;
-  padding: 0.5em;
-  background-color: white;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-section#nouveaute article.produit .card img {
-  align-items: center;
+section article.produit div.card {
+  flex-grow: 0;
+  flex-basis: 200;
+  padding: 0;
+  margin: 16px;
+}
+section article.produit div.cardBorder {
+  border: 1px black solid;
+  width: 250px;
+  padding: 1em;
+}
+section article.produit img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section#nouveaute article.produit h3,
-section#nouveaute article.produit p {
+section article.produit div.cardContent h3 {
+  font-family: "Oswald";
   margin: 0;
   padding: 0;
 }
-section#nouveaute article.produit h3.cardTitle {
+section article.produit div.cardContent p {
   font-family: "Oswald";
-  font-weight: 300;
-  font-size: 24px;
-}
-section#nouveaute article.produit p.cardPrice {
   color: #d71c10;
-  font-size: 36px;
-  font-weight: lighter;
-  font-family: "Oswald";
+  margin: 0 0 12px 0;
+  padding: 0;
 }
-section#nouveaute article.produit .cardColors {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 0px;
+section article.produit div.cardContent div.cardColors {
+  display: flex;
 }
-section#nouveaute article.produit .cardColors button {
-  width: 2em;
-  height: 2em;
-  border: 1px black solid;
-}
-section#nouveaute article.produit .cardColors #cardBtn1 {
+section article.produit div.cardContent div.cardColors #cardBtn1 {
   background-color: #fff;
+  border: 1px black solid;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
-section#nouveaute article.produit .cardColors #cardBtn2 {
+section article.produit div.cardContent div.cardColors #cardBtn2 {
   background-color: #000;
+  border: 1px black solid;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-section#nouveaute article.produit .cardColors #cardBtn3 {
-  background-color: #646464;
-}
-section#nouveaute article.produit .cardColors #cardBtn4 {
+section article.produit div.cardContent div.cardColors #cardBtn3 {
   background-color: #d71c10;
+  border: 1px black solid;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+section article.produit div.cardContent div.cardColors #view {
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 1281px) {
@@ -271,15 +275,12 @@ section#nouveaute article.produit .cardColors #cardBtn4 {
   section#carrousel {
     flex-direction: column;
   }
-  article.produit .container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 0px;
-    grid-column-gap: 35px;
-  }
 }
 @media screen and (max-width: 1325px) {
   .container {
-    grid-column-gap: 45px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 65px;
+    grid-row-gap: 0px;
   }
 }/*# sourceMappingURL=theme.css.map */
